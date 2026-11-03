@@ -3,7 +3,7 @@
 ## Verified implementation
 
 - Architecture: Python standard library → GitHub Actions → append-only JSON change observations → Cloudflare Pages Git integration (pending connection) → vanilla HTML/CSS/JS dashboard.
-- Repository: https://github.com/VladimirStohov/iphone-price-tracker-bulgaria — owner/visibility/access checked; source publication in progress.
+- Repository: https://github.com/VladimirStohov/iphone-price-tracker-bulgaria — public repository and all 23 source/data files published and read back from main; initial commit c128fe326bd36756a72887522ed10d5f0d3dedc8 verified.
 - Public website: **not deployed**; do not invent a Pages URL.
 - 38 accepted model/storage configurations, 12 model names, generations 15/16/17. Actual discovered coverage: 6 configurations.
 - Initial live scan: 2026-11-03 18:09–18:11 UTC (20:09–20:11 Sofia), 2 retailers returned real product prices.
