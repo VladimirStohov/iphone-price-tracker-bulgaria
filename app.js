@@ -14,7 +14,7 @@ const storeName=id=>stores.find(s=>s.id===id)?.name||id;
 async function load(){
  try{
   [offers,history,stores,status,config]=await Promise.all(['data/current_prices.json','data/price_history.json','data/stores.json','data/run_status.json','site.json'].map(async p=>{let r=await fetch(p,{cache:'no-store'});if(!r.ok)throw Error(p+': HTTP '+r.status);return r.json()}));
-  $('#updated').textContent=date(status.last_successful_scan);$('#schedule').textContent=config.schedule+' · scheduling requires deployment';
+  $('#updated').textContent=date(status.last_successful_scan);$('#schedule').textContent=config.schedule;
   for(const id of ['repository','website'])if(config[id+'_url']){$('#'+id).href=config[id+'_url'];$('#'+id).hidden=false}
   $('#model').insertAdjacentHTML('beforeend',[...new Set(offers.map(r=>r.model))].sort().map(x=>`<option>${esc(x)}</option>`).join(''));
   $('#retailer').insertAdjacentHTML('beforeend',stores.map(s=>`<option value="${esc(s.id)}">${esc(s.name)}</option>`).join(''));
@@ -41,4 +41,3 @@ function chart(){if(!chosen)return;const period=$('#period').value,cutoff=period
  [...new Set(points.map(r=>r.id))].forEach((id,i)=>{let series=points.filter(r=>r.id===id).sort((a,b)=>new Date(a.verified_at)-new Date(b.verified_at)),color=colors[[...enabled].indexOf(series[0].store)%colors.length];if(series.length>1)svg+=`<polyline points="${series.map(r=>X(new Date(r.verified_at).getTime())+','+Y(r.price)).join(' ')}" fill="none" stroke="${color}" stroke-width="1.6" opacity=".7"/>`;for(const r of series)svg+=`<circle cx="${X(new Date(r.verified_at).getTime())}" cy="${Y(r.price)}" r="4" fill="${color}"><title>${esc(storeName(r.store)+' · '+r.title+' · '+money(r.price)+' · '+date(r.verified_at))}</title></circle>`});
  svg+=`<text x="65" y="255" fill="#7e8b80" font-size="10">${esc(date(new Date(start).toISOString()))}</text><text x="715" y="255" text-anchor="end" fill="#7e8b80" font-size="10">${start===end?'':esc(date(new Date(end).toISOString()))}</text></svg>`;$('#chart').innerHTML=svg;$('#chart-note').textContent=(new Set(points.map(r=>r.verified_at)).size<2?'Insufficient history for a trend. ':'')+'Actual observations only; unchanged-price days are not fabricated. Hover a point for its exact source, date and price. Different offers remain separate.'}
 $('#filters').oninput=render;$('#filters').onchange=render;$('#filters').onsubmit=e=>e.preventDefault();$('#filters').onreset=()=>setTimeout(render,0);$('#close').onclick=()=>$('#detail').close();$('#period').onchange=chart;load();
-

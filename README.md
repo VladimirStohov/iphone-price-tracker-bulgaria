@@ -2,13 +2,13 @@
 
 Automated historical price monitoring and deal tracking for iPhone 15, 16 and 17 models across reputable Bulgarian retailers.
 
-**Deployment is not complete. Read [PROJECT_STATUS.md](PROJECT_STATUS.md) for verified state and blockers.**
+**[Live dashboard](https://iphone-price-tracker-bulgaria.pages.dev/)** · [Project status](PROJECT_STATUS.md)
 
 ## Architecture
 
 Public GitHub source + JSON observations → ordinary Python GitHub Actions scan → commit data → Cloudflare Pages official Git integration → static HTML dashboard. No LLM calls, API subscriptions, backend or external database. Python 3.12+ standard library only; no dependency installation is necessary.
 
-The initial scope is **iSTYLE and Ardes**, with bounded discovery of product pages. This is deliberately not all Bulgarian retailers or all colours/storage variants. Other shortlisted retailers and operators are not implemented. Model parsing supports 38 manufacturer model/storage combinations across the requested 12 models; this is not a claim that all combinations were discovered in stores. The official name “iPhone Air” is used; “iPhone 17 Air” is accepted as an input alias.
+The configured retailers are **iSTYLE, Ardes, eMAG Bulgaria, Ozone, Technomarket and Plesio**, with bounded discovery of product pages. This is deliberately not all Bulgarian retailers or all colours/storage variants. Other shortlisted retailers and operators are not implemented. Model parsing supports 38 manufacturer model/storage combinations across the requested 12 models; this is not a claim that all combinations were discovered in stores. The official name “iPhone Air” is used; “iPhone 17 Air” is accepted as an input alias.
 
 ## Start and maintain
 

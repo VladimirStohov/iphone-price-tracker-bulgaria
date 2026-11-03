@@ -32,5 +32,54 @@
       "https://ardes.bg/product/apple-iphone-17-8gb-256gb-black-mg6j4zd-a-492338"
     ],
     "research": "EUR JSON-LD offer and Organization on product page. Missing explicit new condition is shown as unconfirmed, excluded from recommendations."
+  },
+  {
+    "id": "emag",
+    "name": "eMAG Bulgaria",
+    "domain": "emag.bg",
+    "channel": "retail",
+    "delay_seconds": 4,
+    "max_products": 16,
+    "listings": [
+      "https://www.emag.bg/search/iphone%2015",
+      "https://www.emag.bg/search/iphone%2016",
+      "https://www.emag.bg/search/iphone%2017"
+    ]
+  },
+  {
+    "id": "ozone",
+    "name": "Ozone",
+    "domain": "ozone.bg",
+    "channel": "retail",
+    "delay_seconds": 3,
+    "max_products": 16,
+    "listings": [
+      "https://www.ozone.bg/group-telefoni-apple/",
+      "https://www.ozone.bg/group-telefoni-apple/?p=2",
+      "https://www.ozone.bg/mobilni-ustroistva/smartfoni/?marka=apple"
+    ]
+  },
+  {
+    "id": "technomarket",
+    "name": "Technomarket",
+    "domain": "technomarket.bg",
+    "channel": "retail",
+    "delay_seconds": 3,
+    "max_products": 16,
+    "listings": [
+      "https://www.technomarket.bg/iphone17-pre-order",
+      "https://www.technomarket.bg/br-14102025-iphone-17-air"
+    ]
+  },
+  {
+    "id": "plesio",
+    "name": "Plesio",
+    "domain": "plesio.bg",
+    "channel": "retail",
+    "delay_seconds": 3,
+    "max_products": 16,
+    "listings": [
+      "https://plesio.bg/smartfoni-smartfoni-c-69978016.html?filter%5Bchr%5D%5B2%5D%5B%5D=Apple"
+    ]
   }
 ]

@@ -3,6 +3,9 @@ from tracker.core import Page,walk,identify,normalize
 
 class StructuredAdapter:
     def __init__(self,store,client):self.store=store;self.client=client
+    def candidate(self,url):return 'iphone' in url.lower()
+    def accept_offer(self,offer):return True
+    def records(self,page,url,html):return [o for blob in page.jsons for o in walk(blob)]
     def scan(self,now):
         candidates=set(self.store.get('seeds',[]));errors=[];found=[]
         for listing in self.store['listings']:
@@ -12,7 +15,7 @@ class StructuredAdapter:
                     url=urljoin(listing,href).split('#')[0].split('?')[0]
                     if urlparse(url).hostname not in (self.store['domain'],'www.'+self.store['domain']):continue
                     if not self.product_path(url):continue
-                    if 'iphone' not in url.lower():continue
+                    if not self.candidate(url):continue
                     candidates.add(url)
             except Exception as exc:errors.append({'url':listing,'error':type(exc).__name__+': '+str(exc)[:160]})
         # Prefer each supported model before filling remaining slots with colour variants.
@@ -29,7 +32,7 @@ class StructuredAdapter:
         limit=self.store.get('max_products',36);skipped=0
         for url in queue[:limit]:
             try:
-                page=Page(self.client.get(url));objects=[o for blob in page.jsons for o in walk(blob)]
+                html=self.client.get(url);objects=self.records(Page(html),url,html)
                 organizations=[o for o in objects if o.get('@type')=='Organization' and urlparse(o.get('url','')).hostname in (self.store['domain'],'www.'+self.store['domain'])]
                 products=[o for o in objects if o.get('@type') in ('Product','ProductGroup')]
                 count_before=len(found)
@@ -39,7 +42,7 @@ class StructuredAdapter:
                     offers=p.get('offers',[]);offers=offers if isinstance(offers,list) else [offers]
                     # Prefer richer explicit condition evidence for otherwise identical offers.
                     for offer in offers:
-                        if offer.get('@type')=='AggregateOffer':continue
+                        if not isinstance(offer,dict) or offer.get('@type')=='AggregateOffer' or not self.accept_offer(offer):continue
                         offer_url=urljoin(url,offer.get('url') or p.get('url') or url)
                         try:found.append(normalize(p,offer,self.store,offer_url,now,organizations))
                         except ValueError as exc:errors.append({'url':url,'error':str(exc)})

@@ -1,5 +1,10 @@
 name: Daily iPhone price scan
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'tracker/adapters/**'
+      - 'data/stores.json'
   schedule:
     - cron: '7 12 * * *'
       timezone: Europe/Sofia
@@ -11,7 +16,7 @@ on:
         options: [full, retry_failed, selected_stores]
         default: full
       selected_stores:
-        description: Comma-separated enabled IDs (istyle,ardes)
+        description: Comma-separated enabled IDs (istyle,ardes,emag,ozone,plesio,technomarket)
         type: string
         default: ''
 permissions:
