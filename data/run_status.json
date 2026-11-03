@@ -1,7 +1,7 @@
 {
-  "started_at": "2026-11-03T18:36:25.454762+00:00",
-  "finished_at": "2026-11-03T18:38:02.689265+00:00",
-  "trigger": "workflow_dispatch",
+  "started_at": "2026-11-03T19:04:16.146415+00:00",
+  "finished_at": "2026-11-03T19:08:06.196249+00:00",
+  "trigger": "push",
   "mode": "full",
   "stores": {
     "istyle": {
@@ -24,18 +24,65 @@
           "error": "ValueError: No valid product offers; adapter requires maintenance. [{'url': 'https://ardes.bg/smartfoni/smartfoni/apple', 'error': 'HTTPError: HTTP Error 403: Forbidden'}, {'url': 'https://ardes.bg/product/apple-iphone-17-8gb-256gb-black-mg6j4zd-a-492338', 'error': 'PermissionError: Retailer stopped for this run after HTTP 403/429; no retries or bypass'}]"
         }
       ]
+    },
+    "emag": {
+      "status": "failed",
+      "products_found": 0,
+      "products_verified": 0,
+      "errors": [
+        {
+          "error": "ValueError: No valid product offers; adapter requires maintenance. [{'url': 'https://www.emag.bg/search/iphone%2015', 'error': 'HTTPError: HTTP Error 511: '}, {'url': 'https://www.emag.bg/search/iphone%2016', 'error': 'PermissionError: Disallowed by robots.txt: /search/iphone%2016'}]"
+        }
+      ]
+    },
+    "ozone": {
+      "errors": [],
+      "discovered": 32,
+      "attempted": 16,
+      "skipped": 1,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 20,
+      "status": "success",
+      "products_found": 15,
+      "products_verified": 15
+    },
+    "technomarket": {
+      "errors": [],
+      "discovered": 6,
+      "attempted": 6,
+      "skipped": 0,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 9,
+      "status": "success",
+      "products_found": 6,
+      "products_verified": 0
+    },
+    "plesio": {
+      "errors": [],
+      "discovered": 14,
+      "attempted": 14,
+      "skipped": 0,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 16,
+      "status": "success",
+      "products_found": 14,
+      "products_verified": 0
     }
   },
-  "last_successful_scan": "2026-11-03T18:38:02.689265+00:00",
+  "last_successful_scan": "2026-11-03T19:08:06.196249+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
-  "stores_checked": 2,
+  "stores_checked": 6,
   "successful_stores": [
-    "istyle"
+    "istyle",
+    "ozone",
+    "technomarket",
+    "plesio"
   ],
   "partial_stores": [],
   "failed_stores": [
-    "ardes"
+    "ardes",
+    "emag"
   ],
-  "products_verified": 10
+  "products_verified": 25
 }
