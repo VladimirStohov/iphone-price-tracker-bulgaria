@@ -8,16 +8,16 @@
 - 38 accepted model/storage configurations, 12 model names, generations 15/16/17. Actual discovered coverage: 6 configurations.
 - Initial live scan: 2026-11-03 18:09–18:11 UTC (20:09–20:11 Sofia), 2 retailers returned real product prices.
 - Accepted data after duplicate validation: 14 unique offers, 8 explicitly confirmed new (iSTYLE), 6 condition-unconfirmed (Ardes); 0 observed price reductions, 0 claimed active promotions.
-- iSTYLE partial: 2 HTTP 429 responses in the initial run. New scanner now stops all additional requests to a host after 403/429; no bypass. Delay increased to 5 seconds for future scans.
+- iSTYLE initial scan partial: 2 HTTP 429 responses; subsequent GitHub run succeeded. New scanner now stops all additional requests to a host after 403/429; no bypass. Delay increased to 5 seconds for future scans.
 - Ardes: 6 extracted offers; explicit NewCondition absent, so excluded from new-device recommendations.
 - Local tests: 16 passed; JavaScript syntax and static build passed. Browser QA unavailable: browser tool failed twice with “failed to write kernel assets … path not found”.
 
 ## Not yet verified / blockers
 
-- GitHub workflow_dispatch and scheduled execution have not been tested on GitHub.
+- Manual workflow_dispatch verified successful: run 41694748396, 2026-11-03 18:32–18:34 UTC (20:32–20:34 Sofia). All 16 tests, scan, data commit and push succeeded. iSTYLE: 10 confirmed-new offers; Ardes: blocked by HTTP 403 on GitHub runner, prior prices retained stale. New reductions: 0. Scheduled invocation itself has not yet occurred.
 - Cloudflare account is signed in according to user, but unavailable to automation due to browser-tool infrastructure failure. Official Git integration and first deployment still required.
 - The connected GitHub plugin has no repository-creation or workflow_dispatch operation. User created the public repository with README. Source can be published through Git tree/commit APIs.
-- Nine other shortlisted retailers/operators are **not implemented**, not falsely counted as monitored or failed live integrations. Two initial adapters are enabled; iSTYLE is partial, Ardes is not yet eligible for confirmed-new recommendations.
+- Nine other shortlisted retailers/operators are **not implemented**, not falsely counted as monitored or failed live integrations. Two initial adapters are enabled; latest iSTYLE scan succeeded, Ardes is blocked from GitHub runners (403) and is not eligible for confirmed-new recommendations.
 - Discovery is bounded and not exhaustive. Colour extraction is limited to explicit JSON-LD. Retailer-specific promotions beyond structured strikethrough priceSpecification need adapters. No retailer explicit promotion dates found.
 - Only one observation period exists; no price trend or historical discount is asserted. No browser/runtime/public-deployment verification yet.
 
