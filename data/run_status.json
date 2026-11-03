@@ -1,0 +1,52 @@
+{
+  "started_at": "2026-11-03T18:09:46.602583+00:00",
+  "finished_at": "2026-11-03T18:11:17.412502+00:00",
+  "trigger": "initial-development",
+  "mode": "full",
+  "stores": {
+    "istyle": {
+      "errors": [
+        {
+          "url": "https://istyle.bg/products/iphone-air-mg2m4zd-a",
+          "error": "HTTPError: HTTP Error 429: Too Many Requests"
+        },
+        {
+          "url": "https://istyle.bg/products/iphone-17-mg6k4zd-a",
+          "error": "HTTPError: HTTP Error 429: Too Many Requests"
+        }
+      ],
+      "discovered": 14,
+      "attempted": 14,
+      "skipped": 4,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 20,
+      "status": "partial",
+      "products_found": 8,
+      "products_verified": 8
+    },
+    "ardes": {
+      "errors": [],
+      "discovered": 24,
+      "attempted": 24,
+      "skipped": 18,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 26,
+      "status": "success",
+      "products_found": 6,
+      "products_verified": 0
+    }
+  },
+  "last_successful_scan": "2026-11-03T18:11:17.412502+00:00",
+  "new_price_reductions": 0,
+  "scope": "Enabled adapters only; partial market coverage",
+  "stores_checked": 2,
+  "successful_stores": [
+    "ardes"
+  ],
+  "partial_stores": [
+    "istyle"
+  ],
+  "failed_stores": [],
+  "products_verified": 8,
+  "initial_validation": "Collapsed duplicate ProductGroup/Product representations of identical SKU offers, same observed price and timestamp, before first publication. No price changes removed."
+}

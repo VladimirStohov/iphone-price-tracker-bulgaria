@@ -1,0 +1,36 @@
+[
+  {
+    "id": "istyle",
+    "name": "iSTYLE Bulgaria",
+    "domain": "istyle.bg",
+    "channel": "retail",
+    "delay_seconds": 5,
+    "max_products": 36,
+    "listings": [
+      "https://istyle.bg/collections/iphone-15",
+      "https://istyle.bg/collections/iphone-16",
+      "https://istyle.bg/collections/iphone-17",
+      "https://istyle.bg/collections/iphone-17-pro",
+      "https://istyle.bg/collections/iphone-air"
+    ],
+    "seeds": [
+      "https://istyle.bg/products/iphone-17-mg6k4zd-a"
+    ],
+    "research": "Product page returns EUR offers, explicit NewCondition, same-domain Organization seller evidence."
+  },
+  {
+    "id": "ardes",
+    "name": "Ardes",
+    "domain": "ardes.bg",
+    "channel": "retail",
+    "delay_seconds": 2,
+    "max_products": 36,
+    "listings": [
+      "https://ardes.bg/smartfoni/smartfoni/apple"
+    ],
+    "seeds": [
+      "https://ardes.bg/product/apple-iphone-17-8gb-256gb-black-mg6j4zd-a-492338"
+    ],
+    "research": "EUR JSON-LD offer and Organization on product page. Missing explicit new condition is shown as unconfirmed, excluded from recommendations."
+  }
+]

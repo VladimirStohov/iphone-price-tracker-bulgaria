@@ -1,0 +1,52 @@
+name: Daily iPhone price scan
+on:
+  schedule:
+    - cron: '7 12 * * *'
+      timezone: Europe/Sofia
+  workflow_dispatch:
+    inputs:
+      scan_mode:
+        description: Scan scope
+        type: choice
+        options: [full, retry_failed, selected_stores]
+        default: full
+      selected_stores:
+        description: Comma-separated enabled IDs (istyle,ardes)
+        type: string
+        default: ''
+permissions:
+  contents: read
+concurrency:
+  group: iphone-price-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test price and history logic
+        run: python -m unittest discover -s tests -v
+      - name: Scan public product pages
+        env:
+          SCAN_MODE: ${{ inputs.scan_mode || 'full' }}
+          SELECTED_STORES: ${{ inputs.selected_stores || '' }}
+          TRIGGER: ${{ github.event_name }}
+        run: python -m tracker.scan --mode "$SCAN_MODE" --stores "$SELECTED_STORES" --trigger "$TRIGGER"
+      - name: Commit observations and scan status
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/current_prices.json data/price_history.json data/run_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: record daily price observations and scan status"
+            git push
+          fi
+      - name: Check failed retailers
+        run: |
+          python -c "import json; s=json.load(open('data/run_status.json')); print(s); assert s['successful_stores'] or s['partial_stores'], 'All stores failed; previous prices retained as stale'"
