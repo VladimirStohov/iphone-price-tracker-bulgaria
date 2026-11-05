@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-04T17:56:21.825762+00:00",
-  "finished_at": "2026-11-04T18:00:09.556155+00:00",
+  "started_at": "2026-11-05T17:57:03.832861+00:00",
+  "finished_at": "2026-11-05T18:01:55.548189+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -80,22 +80,21 @@
       "products_verified": 0
     }
   },
-  "last_successful_scan": "2026-11-04T18:00:09.556155+00:00",
-  "new_price_reductions": 0,
+  "last_successful_scan": "2026-11-05T18:01:55.548189+00:00",
+  "new_price_reductions": 5,
   "scope": "Enabled adapters only; partial market coverage",
-  "stores_checked": 6,
+  "stores_checked": 7,
   "successful_stores": [
     "istyle",
     "ozone",
     "technomarket",
-    "plesio"
+    "plesio",
+    "buybest"
   ],
   "partial_stores": [],
   "failed_stores": [
     "ardes",
     "emag"
   ],
-  "products_verified": 25,
-  "buybest_added_at": "2026-11-05T15:58:18.041192+00:00",
-  "buybest_verification_source": "Local scanner: actual public product pages. GitHub run 42060761661 also collected BuyBest successfully but data push failed: remote commit_refs_rules."
+  "products_verified": 25
 }
