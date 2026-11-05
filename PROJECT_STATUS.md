@@ -9,3 +9,9 @@
 - Automation: 12:07 Europe/Sofia; manual dispatch supported; changes to retailer code/catalog configuration also trigger a scan. Data commits do not trigger another scan. No dependencies or paid APIs.
 - First scan for all six retailers should be checked under GitHub Actions after publishing these changes. Use the deployed data/run_status.json to confirm Pages picked up the data commit.
 - See README for adapter maintenance and Cloudflare build settings.
+
+## BuyBest integration — 2026-11-05 (publication)
+- BuyBest.bg robots.txt permits public requests. Adapter reads only JSON from window.product, explicit price_euro, not BGN, accessory/credit/reference prices. No script execution.
+- First live scan: 15 product offers, zero collection errors; condition and availability unconfirmed, excluded from new-device recommendations. Base price only; colour variants may differ. No historical drops asserted.
+- Tests: 19 passed; static build passed. Existing public prices/history remain preserved in local data.
+- GitHub reconnected; adapter/config/tests published. Existing push-triggered workflow scans all enabled stores. Confirm latest data/run_status.json after completion. Local first-scan history is not uploaded over the live database.

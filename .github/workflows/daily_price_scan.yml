@@ -16,7 +16,7 @@ on:
         options: [full, retry_failed, selected_stores]
         default: full
       selected_stores:
-        description: Comma-separated enabled IDs (istyle,ardes,emag,ozone,plesio,technomarket)
+        description: Comma-separated enabled IDs (istyle,ardes,emag,ozone,plesio,technomarket,buybest)
         type: string
         default: ''
 permissions:

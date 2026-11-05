@@ -81,5 +81,21 @@
     "listings": [
       "https://plesio.bg/smartfoni-smartfoni-c-69978016.html?filter%5Bchr%5D%5B2%5D%5B%5D=Apple"
     ]
+  },
+  {
+    "id": "buybest",
+    "name": "BuyBest.bg",
+    "domain": "buybest.bg",
+    "channel": "retail",
+    "delay_seconds": 3,
+    "max_products": 16,
+    "listings": [
+      "https://buybest.bg/manufacturers/apple",
+      "https://buybest.bg/manufacturers/apple?page=2",
+      "https://buybest.bg/manufacturers/apple?page=3",
+      "https://buybest.bg/manufacturers/apple?page=4",
+      "https://buybest.bg/manufacturers/apple?page=5"
+    ],
+    "research": "Public product window.product JSON, explicit price_euro. Base product price; colour variants may differ. Condition and availability not explicitly confirmed."
   }
 ]
