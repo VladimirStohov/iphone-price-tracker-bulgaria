@@ -67,6 +67,17 @@
       "status": "success",
       "products_found": 14,
       "products_verified": 0
+    },
+    "buybest": {
+      "errors": [],
+      "discovered": 15,
+      "attempted": 15,
+      "skipped": 0,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 21,
+      "status": "success",
+      "products_found": 15,
+      "products_verified": 0
     }
   },
   "last_successful_scan": "2026-11-04T18:00:09.556155+00:00",
@@ -84,5 +95,7 @@
     "ardes",
     "emag"
   ],
-  "products_verified": 25
+  "products_verified": 25,
+  "buybest_added_at": "2026-11-05T15:58:18.041192+00:00",
+  "buybest_verification_source": "Local scanner: actual public product pages. GitHub run 42060761661 also collected BuyBest successfully but data push failed: remote commit_refs_rules."
 }
