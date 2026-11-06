@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-05T17:57:03.832861+00:00",
-  "finished_at": "2026-11-05T18:01:55.548189+00:00",
+  "started_at": "2026-11-06T17:23:10.664100+00:00",
+  "finished_at": "2026-11-06T17:27:57.583287+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -70,18 +70,18 @@
     },
     "buybest": {
       "errors": [],
-      "discovered": 15,
-      "attempted": 15,
+      "discovered": 14,
+      "attempted": 14,
       "skipped": 0,
       "coverage": "bounded discovery; not all store inventory",
-      "requests": 21,
+      "requests": 20,
       "status": "success",
-      "products_found": 15,
+      "products_found": 14,
       "products_verified": 0
     }
   },
-  "last_successful_scan": "2026-11-05T18:01:55.548189+00:00",
-  "new_price_reductions": 5,
+  "last_successful_scan": "2026-11-06T17:27:57.583287+00:00",
+  "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
