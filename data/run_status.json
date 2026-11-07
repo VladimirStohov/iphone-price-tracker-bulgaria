@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-06T17:23:10.664100+00:00",
-  "finished_at": "2026-11-06T17:27:57.583287+00:00",
+  "started_at": "2026-11-07T16:17:30.545569+00:00",
+  "finished_at": "2026-11-07T16:22:18.601952+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -37,7 +37,7 @@
     },
     "ozone": {
       "errors": [],
-      "discovered": 32,
+      "discovered": 31,
       "attempted": 16,
       "skipped": 1,
       "coverage": "bounded discovery; not all store inventory",
@@ -80,7 +80,7 @@
       "products_verified": 0
     }
   },
-  "last_successful_scan": "2026-11-06T17:27:57.583287+00:00",
+  "last_successful_scan": "2026-11-07T16:22:18.601952+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
