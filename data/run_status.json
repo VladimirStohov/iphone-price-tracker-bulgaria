@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-08T16:36:15.873479+00:00",
-  "finished_at": "2026-11-08T16:41:03.170774+00:00",
+  "started_at": "2026-11-09T20:38:23.039527+00:00",
+  "finished_at": "2026-11-09T20:43:10.050378+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -80,8 +80,8 @@
       "products_verified": 0
     }
   },
-  "last_successful_scan": "2026-11-08T16:41:03.170774+00:00",
-  "new_price_reductions": 0,
+  "last_successful_scan": "2026-11-09T20:43:10.050378+00:00",
+  "new_price_reductions": 7,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
