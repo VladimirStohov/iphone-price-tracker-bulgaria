@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-10T17:39:35.292685+00:00",
-  "finished_at": "2026-11-10T17:44:21.471863+00:00",
+  "started_at": "2026-11-11T17:50:18.911816+00:00",
+  "finished_at": "2026-11-11T17:54:07.499820+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -39,12 +39,12 @@
       "errors": [],
       "discovered": 32,
       "attempted": 16,
-      "skipped": 0,
+      "skipped": 1,
       "coverage": "bounded discovery; not all store inventory",
       "requests": 20,
       "status": "success",
-      "products_found": 16,
-      "products_verified": 16
+      "products_found": 15,
+      "products_verified": 15
     },
     "technomarket": {
       "errors": [],
@@ -69,18 +69,17 @@
       "products_verified": 0
     },
     "buybest": {
-      "errors": [],
-      "discovered": 14,
-      "attempted": 14,
-      "skipped": 0,
-      "coverage": "bounded discovery; not all store inventory",
-      "requests": 20,
-      "status": "success",
-      "products_found": 14,
-      "products_verified": 0
+      "status": "failed",
+      "products_found": 0,
+      "products_verified": 0,
+      "errors": [
+        {
+          "error": "ValueError: No valid product offers; adapter requires maintenance. [{'url': 'https://buybest.bg/manufacturers/apple', 'error': 'HTTPError: HTTP Error 403: Forbidden'}, {'url': 'https://buybest.bg/manufacturers/apple?page=2', 'error': 'PermissionError: Retailer stopped for this run after HTTP 403/429; no retries or bypass'}]"
+        }
+      ]
     }
   },
-  "last_successful_scan": "2026-11-10T17:44:21.471863+00:00",
+  "last_successful_scan": "2026-11-11T17:54:07.499820+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
@@ -88,13 +87,13 @@
     "istyle",
     "ozone",
     "technomarket",
-    "plesio",
-    "buybest"
+    "plesio"
   ],
   "partial_stores": [],
   "failed_stores": [
     "ardes",
-    "emag"
+    "emag",
+    "buybest"
   ],
-  "products_verified": 26
+  "products_verified": 25
 }
