@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-13T17:38:08.088113+00:00",
-  "finished_at": "2026-11-13T17:41:57.370731+00:00",
+  "started_at": "2026-11-14T16:30:27.428985+00:00",
+  "finished_at": "2026-11-14T16:34:15.662292+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -37,24 +37,24 @@
     },
     "ozone": {
       "errors": [],
-      "discovered": 31,
+      "discovered": 32,
       "attempted": 16,
-      "skipped": 2,
+      "skipped": 1,
       "coverage": "bounded discovery; not all store inventory",
       "requests": 20,
       "status": "success",
-      "products_found": 14,
-      "products_verified": 14
+      "products_found": 15,
+      "products_verified": 15
     },
     "technomarket": {
       "errors": [],
-      "discovered": 6,
-      "attempted": 6,
+      "discovered": 5,
+      "attempted": 5,
       "skipped": 0,
       "coverage": "bounded discovery; not all store inventory",
-      "requests": 9,
+      "requests": 8,
       "status": "success",
-      "products_found": 6,
+      "products_found": 5,
       "products_verified": 0
     },
     "plesio": {
@@ -79,8 +79,8 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-13T17:41:57.370731+00:00",
-  "new_price_reductions": 4,
+  "last_successful_scan": "2026-11-14T16:34:15.662292+00:00",
+  "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
@@ -95,5 +95,5 @@
     "emag",
     "buybest"
   ],
-  "products_verified": 24
+  "products_verified": 25
 }
