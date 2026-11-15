@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-14T16:30:27.428985+00:00",
-  "finished_at": "2026-11-14T16:34:15.662292+00:00",
+  "started_at": "2026-11-15T16:57:26.116846+00:00",
+  "finished_at": "2026-11-15T17:01:11.200196+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -39,12 +39,12 @@
       "errors": [],
       "discovered": 32,
       "attempted": 16,
-      "skipped": 1,
+      "skipped": 2,
       "coverage": "bounded discovery; not all store inventory",
       "requests": 20,
       "status": "success",
-      "products_found": 15,
-      "products_verified": 15
+      "products_found": 14,
+      "products_verified": 14
     },
     "technomarket": {
       "errors": [],
@@ -79,7 +79,7 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-14T16:34:15.662292+00:00",
+  "last_successful_scan": "2026-11-15T17:01:11.200196+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
@@ -95,5 +95,5 @@
     "emag",
     "buybest"
   ],
-  "products_verified": 25
+  "products_verified": 24
 }
