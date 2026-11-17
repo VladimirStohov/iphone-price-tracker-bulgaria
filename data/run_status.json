@@ -1,19 +1,19 @@
 {
-  "started_at": "2026-11-16T20:16:57.196810+00:00",
-  "finished_at": "2026-11-16T20:21:06.962233+00:00",
+  "started_at": "2026-11-17T19:04:36.492269+00:00",
+  "finished_at": "2026-11-17T19:08:19.013998+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
     "istyle": {
       "errors": [],
-      "discovered": 14,
-      "attempted": 14,
+      "discovered": 13,
+      "attempted": 13,
       "skipped": 4,
       "coverage": "bounded discovery; not all store inventory",
-      "requests": 20,
+      "requests": 19,
       "status": "success",
-      "products_found": 10,
-      "products_verified": 10
+      "products_found": 9,
+      "products_verified": 9
     },
     "ardes": {
       "status": "failed",
@@ -79,8 +79,8 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-16T20:21:06.962233+00:00",
-  "new_price_reductions": 5,
+  "last_successful_scan": "2026-11-17T19:08:19.013998+00:00",
+  "new_price_reductions": 1,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
@@ -95,5 +95,5 @@
     "emag",
     "buybest"
   ],
-  "products_verified": 24
+  "products_verified": 23
 }
