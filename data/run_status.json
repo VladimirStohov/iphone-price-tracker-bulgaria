@@ -1,19 +1,24 @@
 {
-  "started_at": "2026-11-20T18:30:37.339867+00:00",
-  "finished_at": "2026-11-20T18:34:19.169899+00:00",
+  "started_at": "2026-11-21T17:20:29.393382+00:00",
+  "finished_at": "2026-11-21T17:24:11.254869+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
     "istyle": {
-      "errors": [],
+      "errors": [
+        {
+          "url": "https://istyle.bg/products/iphone-17-mg6k4zd-a",
+          "error": "HTTPError: HTTP Error 500: Internal Server Error"
+        }
+      ],
       "discovered": 13,
       "attempted": 13,
       "skipped": 4,
       "coverage": "bounded discovery; not all store inventory",
       "requests": 19,
-      "status": "success",
-      "products_found": 9,
-      "products_verified": 9
+      "status": "partial",
+      "products_found": 8,
+      "products_verified": 8
     },
     "ardes": {
       "status": "failed",
@@ -79,21 +84,22 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-20T18:34:19.169899+00:00",
+  "last_successful_scan": "2026-11-21T17:24:11.254869+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
-    "istyle",
     "ozone",
     "technomarket",
     "plesio"
   ],
-  "partial_stores": [],
+  "partial_stores": [
+    "istyle"
+  ],
   "failed_stores": [
     "ardes",
     "emag",
     "buybest"
   ],
-  "products_verified": 23
+  "products_verified": 22
 }
