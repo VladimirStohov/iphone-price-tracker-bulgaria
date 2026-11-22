@@ -1,24 +1,19 @@
 {
-  "started_at": "2026-11-21T17:20:29.393382+00:00",
-  "finished_at": "2026-11-21T17:24:11.254869+00:00",
+  "started_at": "2026-11-22T17:44:58.370150+00:00",
+  "finished_at": "2026-11-22T17:48:18.413510+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
     "istyle": {
-      "errors": [
-        {
-          "url": "https://istyle.bg/products/iphone-17-mg6k4zd-a",
-          "error": "HTTPError: HTTP Error 500: Internal Server Error"
-        }
-      ],
+      "errors": [],
       "discovered": 13,
       "attempted": 13,
       "skipped": 4,
       "coverage": "bounded discovery; not all store inventory",
       "requests": 19,
-      "status": "partial",
-      "products_found": 8,
-      "products_verified": 8
+      "status": "success",
+      "products_found": 9,
+      "products_verified": 9
     },
     "ardes": {
       "status": "failed",
@@ -63,15 +58,14 @@
       "products_verified": 0
     },
     "plesio": {
-      "errors": [],
-      "discovered": 14,
-      "attempted": 14,
-      "skipped": 0,
-      "coverage": "bounded discovery; not all store inventory",
-      "requests": 16,
-      "status": "success",
-      "products_found": 14,
-      "products_verified": 0
+      "status": "failed",
+      "products_found": 0,
+      "products_verified": 0,
+      "errors": [
+        {
+          "error": "ValueError: No valid product offers; adapter requires maintenance. [{'url': 'https://plesio.bg/smartfoni-smartfoni-c-69978016.html?filter%5Bchr%5D%5B2%5D%5B%5D=Apple', 'error': 'TimeoutError: The read operation timed out'}]"
+        }
+      ]
     },
     "buybest": {
       "status": "failed",
@@ -84,22 +78,21 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-21T17:24:11.254869+00:00",
-  "new_price_reductions": 0,
+  "last_successful_scan": "2026-11-22T17:48:18.413510+00:00",
+  "new_price_reductions": 3,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
+    "istyle",
     "ozone",
-    "technomarket",
-    "plesio"
+    "technomarket"
   ],
-  "partial_stores": [
-    "istyle"
-  ],
+  "partial_stores": [],
   "failed_stores": [
     "ardes",
     "emag",
+    "plesio",
     "buybest"
   ],
-  "products_verified": 22
+  "products_verified": 23
 }
