@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-22T17:44:58.370150+00:00",
-  "finished_at": "2026-11-22T17:48:18.413510+00:00",
+  "started_at": "2026-11-23T21:59:28.742611+00:00",
+  "finished_at": "2026-11-23T22:03:11.692396+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -37,7 +37,7 @@
     },
     "ozone": {
       "errors": [],
-      "discovered": 32,
+      "discovered": 30,
       "attempted": 16,
       "skipped": 2,
       "coverage": "bounded discovery; not all store inventory",
@@ -58,14 +58,15 @@
       "products_verified": 0
     },
     "plesio": {
-      "status": "failed",
-      "products_found": 0,
-      "products_verified": 0,
-      "errors": [
-        {
-          "error": "ValueError: No valid product offers; adapter requires maintenance. [{'url': 'https://plesio.bg/smartfoni-smartfoni-c-69978016.html?filter%5Bchr%5D%5B2%5D%5B%5D=Apple', 'error': 'TimeoutError: The read operation timed out'}]"
-        }
-      ]
+      "errors": [],
+      "discovered": 13,
+      "attempted": 13,
+      "skipped": 0,
+      "coverage": "bounded discovery; not all store inventory",
+      "requests": 15,
+      "status": "success",
+      "products_found": 13,
+      "products_verified": 0
     },
     "buybest": {
       "status": "failed",
@@ -78,20 +79,20 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-22T17:48:18.413510+00:00",
-  "new_price_reductions": 3,
+  "last_successful_scan": "2026-11-23T22:03:11.692396+00:00",
+  "new_price_reductions": 1,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
   "successful_stores": [
     "istyle",
     "ozone",
-    "technomarket"
+    "technomarket",
+    "plesio"
   ],
   "partial_stores": [],
   "failed_stores": [
     "ardes",
     "emag",
-    "plesio",
     "buybest"
   ],
   "products_verified": 23
