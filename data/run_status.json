@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-24T20:36:08.541320+00:00",
-  "finished_at": "2026-11-24T20:39:50.308242+00:00",
+  "started_at": "2026-11-25T19:52:14.074184+00:00",
+  "finished_at": "2026-11-25T19:55:53.701498+00:00",
   "trigger": "schedule",
   "mode": "full",
   "stores": {
@@ -37,7 +37,7 @@
     },
     "ozone": {
       "errors": [],
-      "discovered": 31,
+      "discovered": 32,
       "attempted": 16,
       "skipped": 2,
       "coverage": "bounded discovery; not all store inventory",
@@ -59,13 +59,13 @@
     },
     "plesio": {
       "errors": [],
-      "discovered": 14,
-      "attempted": 14,
+      "discovered": 13,
+      "attempted": 13,
       "skipped": 0,
       "coverage": "bounded discovery; not all store inventory",
-      "requests": 16,
+      "requests": 15,
       "status": "success",
-      "products_found": 14,
+      "products_found": 13,
       "products_verified": 0
     },
     "buybest": {
@@ -79,7 +79,7 @@
       ]
     }
   },
-  "last_successful_scan": "2026-11-24T20:39:50.308242+00:00",
+  "last_successful_scan": "2026-11-25T19:55:53.701498+00:00",
   "new_price_reductions": 0,
   "scope": "Enabled adapters only; partial market coverage",
   "stores_checked": 7,
